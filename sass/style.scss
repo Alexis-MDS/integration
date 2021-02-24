@@ -1,0 +1,441 @@
+@import"mixin.scss";
+
+@media (max-width: 375px){
+
+body{
+    background-color: white;
+    box-shadow: 1px 1px 8px rgba(84, 84, 84, 0.158);
+    @include typo;
+    padding: 10px;
+}
+
+.ville{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: -14px;
+    
+}
+.date{
+    font-size: 1em;
+    font-weight: 200;
+    color: #666;   
+    margin-bottom: -14px;
+}
+.alert{
+    color: orange;
+    font-weight: 600;
+    font-size: 14px;
+}
+.stat{
+    display: flex;
+    flex-direction: row;
+}
+.left{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+
+    img{
+        @include picto;
+        margin-top: 10px;
+    }
+    .temp{
+        margin-left: 10px;
+        font-size: 32px;
+        font-weight: 600;
+        margin-top: -20px;
+    }
+    .degre{
+        margin-left: 5px;
+        
+        a{
+            text-decoration: none;
+            color: #888;         
+        }
+    }
+}
+
+#F{
+    color: #222;
+    font-weight: 600;
+    border-bottom: 1px solid #222;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    @include stat_right;
+}
+.more{
+    text-decoration: none;
+    color: #00278e;
+    font-weight: bold;
+}
+.graph{
+
+    img{
+        width: 100%;
+    }
+}
+.table{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    .elements{
+        text-align: center;
+
+        h2{
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: -10px;
+        }
+        p{
+            font-size: 14px;
+            color: #666;
+        }
+    }
+}
+.slider {
+        width: 100%;
+        display: flex;
+        overflow-x: scroll;
+        border: 1px solid rgba(179, 179, 179, 0.363);
+        border-radius: 5px;
+        
+      
+      .slide {
+        flex-shrink: 0;
+        text-align: center;
+        border: 1px solid rgba(179, 179, 179, 0.363);
+        padding-left: 5px;
+        padding-right: 5px;
+
+        img{
+            @include picto;
+            margin-top: 3px;
+            margin-bottom: 0;
+        }
+
+        h2{
+            font-size: 1em;
+            font-weight: 600;
+            padding-top: 20px;
+        }
+        h3{
+            font-weight: 600;
+            font-size: 18px;
+        }
+        p{
+            font-size: 1em;
+        }
+      }
+
+      .slide :hover{
+        background-color: #f7f7f7;
+        border-top: 1px solid #222;
+      }
+}
+#active{
+    background-color: #f7f7f7;
+    border-top: 1px solid #222;
+}
+}
+// ---------------------------- VERSION TABLETTE ----------------------------------//
+
+@media (min-width: 375px) and (max-width: 1024px) {
+
+    body{
+        background-color: white;
+        box-shadow: 1px 1px 8px rgba(84, 84, 84, 0.158);
+        @include typo;
+        padding: 10px;
+        width: 60%;
+        margin: 20px;
+    }
+    
+    .ville{
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: -14px;
+        
+    }
+    .date{
+        font-size: 1em;
+        font-weight: 200;
+        color: #666;   
+        margin-bottom: -14px;
+    }
+    .alert{
+        color: orange;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .stat{
+        display: flex;
+        flex-direction: row;
+    }
+    .left{
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+    
+        img{
+            @include picto;
+            margin-top: 10px;
+        }
+        .temp{
+            margin-left: 10px;
+            font-size: 32px;
+            font-weight: 600;
+            margin-top: -20px;
+        }
+        .degre{
+            margin-left: 5px;
+            
+            a{
+                text-decoration: none;
+                color: #888;         
+            }
+        }
+    }
+    
+    #F{
+        color: #222;
+        font-weight: 600;
+        border-bottom: 1px solid #222;
+    }
+    
+    .right{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        @include stat_right;
+    }
+    .more{
+        text-decoration: none;
+        color: #00278e;
+        font-weight: bold;
+    }
+    .graph{
+    
+        img{
+            width: 100%;
+        }
+    }
+    .table{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+    
+        .elements{
+            text-align: center;
+    
+            h2{
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: -10px;
+            }
+            p{
+                font-size: 14px;
+                color: #666;
+            }
+        }
+    }
+    .slider {
+            width: 100%;
+            display: flex;
+            overflow-x: scroll;
+            justify-content: space-evenly;
+            
+          
+          .slide {
+            flex-shrink: 1;
+            text-align: center;
+            border: 1px solid rgba(179, 179, 179, 0.363);
+            padding-left: 5px;
+            padding-right: 5px;
+            width: 100%;
+    
+            img{
+                @include picto;
+                margin-top: 3px;
+                margin-bottom: 0;
+            }
+    
+            h2{
+                font-size: 1em;
+                font-weight: 600;
+                padding-top: 20px;
+            }
+            h3{
+                font-weight: 600;
+                font-size: 18px;
+            }
+            p{
+                font-size: 1em;
+            }
+          }
+    
+      
+    }
+    #active{
+        background-color: #f7f7f7;
+        border-top: 1px solid #222;
+    }
+}
+
+// ============VERSION LAPTOP/DESKTOP================================//
+@media (min-width: 1025px) {
+
+    body{
+        background-color: white;
+        box-shadow: 1px 1px 8px rgba(84, 84, 84, 0.158);
+        @include typo;
+        padding: 10px;
+        width: 40%;
+        margin: 20px;
+    }
+    .top_info{
+        padding-left: 10px;
+    }
+    
+    .ville{
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: -14px;        
+    }
+    .date{
+        font-size: 1em;
+        font-weight: 200;
+        color: #666;   
+        margin-bottom: -14px;
+    }
+    .alert{
+        color: orange;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .stat{
+        display: flex;
+        flex-direction: row;
+    }
+    .left{
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+    
+        img{
+            @include picto;
+            margin-top: 10px;
+        }
+        .temp{
+            margin-left: 10px;
+            font-size: 32px;
+            font-weight: 600;
+            margin-top: -20px;
+        }
+        .degre{
+            margin-left: 5px;
+            
+            a{
+                text-decoration: none;
+                color: #888;         
+            }
+        }
+    }
+    
+    #F{
+        color: #222;
+        font-weight: 600;
+        border-bottom: 1px solid #222;
+    }
+    
+    .right{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        @include stat_right;
+    }
+    .more{
+        text-decoration: none;
+        color: #00278e;
+        font-weight: bold;
+    }
+    .graph{
+    
+        img{
+            width: 100%;
+        }
+    }
+    .table{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+    
+        .elements{
+            text-align: center;
+    
+            h2{
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: -10px;
+            }
+            p{
+                font-size: 14px;
+                color: #666;
+            }
+        }
+    }
+    .slider {
+            width: 100%;
+            display: flex;
+            overflow-x: auto;
+            justify-content: space-evenly;
+            
+          
+          .slide {
+            flex-shrink: 1;
+            text-align: center;
+            border: 1px solid rgba(179, 179, 179, 0.363);
+            padding-left: 10px;
+            padding-right: 10px;
+            width: 100%;
+            line-height: 15%;
+    
+            img{
+                @include picto;
+                margin-top: 3px;
+                margin-bottom: 0;
+            }    
+            h2{
+                font-size: 1em;
+                font-weight: 600;
+                padding-top: 20px;
+            }
+            h3{
+                font-weight: 600;
+                font-size: 18px;
+            }
+            p{
+                font-size: 1em;
+            }
+          }
+    
+      
+    }
+    #active{
+        background-color: #f7f7f7;
+        border-top: 1px solid #222;
+    }
+    .slide:hover{
+        background-color: #f7f7f7;
+        border-top: 1px solid #222;
+    }
+}

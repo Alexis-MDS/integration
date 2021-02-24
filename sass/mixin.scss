@@ -1,0 +1,17 @@
+@mixin typo {
+    font-family: proxima-nova,sans-serif;
+    color: black;
+}
+
+@mixin stat_right{
+    font-family: proxima-nova,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(97, 97, 97); 
+}
+
+@mixin picto{
+    width: 48px;
+    height: 48px;
+}
+
